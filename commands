@@ -1,0 +1,49 @@
+const BankIc = await Bank.deployed()
+const MineTokenIc = await MineToken.deployed()
+var balances = await MineTokenIc.balanceOf(BankIc.address)
+web3.utils.fromWei(balances)
+
+await MineTokenIc.approve(BankIc.address, "1000000000000000000000000000000000000")
+// await MineTokenIc.approve(MineTokenIc.address, "1000000000000000000000000000000000000")
+await MineTokenIc.transfer(BankIc.address, "100000000000000000000");
+
+
+await BankIc.token()
+var accounts = web3.eth.getAccounts();
+accounts[0];
+
+
+await BankIc.buy({value: "1000000000000000000"})
+await BankIc.sell("1000000000000000000")
+
+15 => 1
+31,536,000 => 2102400
+
+10% => 10000000000000000 / 2102400 = 475646879
+
+address
+amount
+blockStart 10
+lastClaimBlock 0
+
+block.current 30 - 10 = 20
+lastClaimBlock = block.current
+block.current - lastClaimBlock: 50 - 30 = 20
+
+- ERC20
+startBlock = block.current
+
+
+
+172800
+
+
+
+withdraw -> block.current - startBlock > 172800
+
+Và tạo 1 token tuỳ ý, sau đó viết 1 contract cho phép user có thể gửi token (đã tạo ở trên) vào trong contract để lấy lãi (như kiểu gửi tiền vào ngân hàng để tiết kiệm).
+- Admin có thể set được lãi suất (mặc định 10%/năm).
+- Admin có thể set chương trình kéo dài bao nhiêu ngày, khi hết chương trình user mới có thể rút token ra được.
+- Khi user rút token đã gửi thì kèm theo số tiền gốc + lãi.
+
+
