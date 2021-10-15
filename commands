@@ -26,24 +26,6 @@ amount
 blockStart 10
 lastClaimBlock 0
 
-block.current 30 - 10 = 20
-lastClaimBlock = block.current
-block.current - lastClaimBlock: 50 - 30 = 20
 
-- ERC20
-startBlock = block.current
-
-
-
-172800
-
-
-
-withdraw -> block.current - startBlock > 172800
-
-Và tạo 1 token tuỳ ý, sau đó viết 1 contract cho phép user có thể gửi token (đã tạo ở trên) vào trong contract để lấy lãi (như kiểu gửi tiền vào ngân hàng để tiết kiệm).
-- Admin có thể set được lãi suất (mặc định 10%/năm).
-- Admin có thể set chương trình kéo dài bao nhiêu ngày, khi hết chương trình user mới có thể rút token ra được.
-- Khi user rút token đã gửi thì kèm theo số tiền gốc + lãi.
 
 
